@@ -38,3 +38,6 @@ C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Dapper.dll
 C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\MoreLinq.dll
 C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Dapper.xml
 C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\MoreLinq.xml
+C:\Users\WIN8\Desktop\GitTest2\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\WIN8\Desktop\GitTest2\Betkas\obj\Debug\Betkas.exe
+C:\Users\WIN8\Desktop\GitTest2\Betkas\obj\Debug\Betkas.pdb
