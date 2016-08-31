@@ -7,7 +7,7 @@ namespace Comperator
     {
         static void Main(string[] args)
         {
-            // NAUJAS CHANGES GIT 
+            // NAUJAS CHANGES GIT
             var sw = new Stopwatch();
             var overwatch = new Stopwatch();
             overwatch.Start();
