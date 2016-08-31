@@ -9,6 +9,7 @@ namespace Comperator
         {
             // NAUJAS CHANGES GIT
             // Antras change
+//Vykintas
             var sw = new Stopwatch();
             var overwatch = new Stopwatch();
             overwatch.Start();
