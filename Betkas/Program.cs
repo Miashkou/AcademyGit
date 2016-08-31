@@ -8,6 +8,7 @@ namespace Comperator
         static void Main(string[] args)
         {
             // NAUJAS CHANGES GIT
+            // Antras change
             var sw = new Stopwatch();
             var overwatch = new Stopwatch();
             overwatch.Start();
