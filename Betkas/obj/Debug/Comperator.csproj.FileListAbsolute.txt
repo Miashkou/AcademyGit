@@ -8,36 +8,33 @@ C:\Users\WIN8\OneDrive\imdbScrap\Betkas\Betkas\bin\Debug\MoreLinq.xml
 C:\Users\WIN8\OneDrive\imdbScrap\Betkas\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
 C:\Users\WIN8\OneDrive\imdbScrap\Betkas\Betkas\obj\Debug\Betkas.exe
 C:\Users\WIN8\OneDrive\imdbScrap\Betkas\Betkas\obj\Debug\Betkas.pdb
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\obj\Debug\Betkas.exe
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\obj\Debug\Betkas.pdb
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\Betkas.exe
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\Betkas.pdb
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\Dapper.dll
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\MoreLinq.dll
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\Dapper.xml
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\bin\Debug\MoreLinq.xml
+C:\Users\EDG\OneDrive\BendriDarbai\Betkas\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\Betkas.exe.config
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\obj\Debug\Betkas.exe
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\obj\Debug\Betkas.pdb
+C:\Users\Vykis\Desktop\Betkas (2)\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\Betkas.exe
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\Betkas.pdb
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\Dapper.dll
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\MoreLinq.dll
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\Dapper.xml
 C:\Users\Vykis\Desktop\Betkas (2)\Betkas\bin\Debug\MoreLinq.xml
-C:\Users\Vykis\Desktop\Betkas (2)\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\Betkas.exe.config
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\obj\Debug\Betkas.exe
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\obj\Debug\Betkas.pdb
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\Betkas.exe
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\Betkas.pdb
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\Dapper.dll
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\MoreLinq.dll
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\Dapper.xml
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\bin\Debug\MoreLinq.xml
-C:\Users\WIN8\OneDrive\imdbScrap\Data Comperator\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Betkas.exe.config
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\obj\Debug\Betkas.exe
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\obj\Debug\Betkas.pdb
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Betkas.exe
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Betkas.pdb
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Dapper.dll
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\MoreLinq.dll
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\Dapper.xml
-C:\Users\EDG\OneDrive\BendriDarbai\Data Comperator\Betkas\bin\Debug\MoreLinq.xml
-C:\Users\WIN8\Desktop\GitTest2\Betkas\bin\Debug\Betkas.exe.config
-C:\Users\WIN8\Desktop\GitTest2\Betkas\obj\Debug\Betkas.exe
-C:\Users\WIN8\Desktop\GitTest2\Betkas\obj\Debug\Betkas.pdb
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\WIN8\Desktop\Belenkas\Betkas\obj\Debug\Betkas.exe
+C:\Users\WIN8\Desktop\Belenkas\Betkas\obj\Debug\Betkas.pdb
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Betkas.exe
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Betkas.pdb
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Dapper.dll
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\MoreLinq.dll
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Dapper.xml
+C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\MoreLinq.xml
+C:\Users\WIN8\Desktop\Belenkas\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache

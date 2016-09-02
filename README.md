@@ -1,3 +1,3 @@
 # AcademyGit
 
-# Added text# More text here
+Best project ever.

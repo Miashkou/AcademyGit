@@ -43,7 +43,7 @@ namespace Comperator
 
         public override string ToString()
         {
-            return string.Join(" ", logTime, transactionType, Campaign, ID_Logpoints, ID_Memberships,
+            return string.Join("|", logTime, transactionType, Campaign, ID_Logpoints, ID_Memberships,
                 bannerId, Sale, Total, ID_AffiliateBanners, ID_BannerClickURLs, RecentAdInteraction,
                 AdInteractionTransactionType, AllSitesUniqueDay, PointUniqueSession, PointRepeat,
                 AllSitesUniqueCampaign, SiteUniqueCampaign, PointUniqueCampaign, UniqueOrderID, UniqueCampaign,
@@ -63,13 +63,13 @@ namespace Comperator
 
         public int CompareScore(Row other)
         {
-            return ToString().Split(' ').Length - FindDifferenceIndexes(other).Count;
+            return ToString().Split('|').Length - FindDifferenceIndexes(other).Count;
         }
 
         public List<int> FindDifferenceIndexes(Row other)
         {
-            string[] thisList = ToString().Split(' ');
-            string[] otherList = other.ToString().Split(' ');
+            string[] thisList = ToString().Split('|');
+            string[] otherList = other.ToString().Split('|');
             List<int> differences = new List<int>();
             for (int i = 0; i < thisList.Length; i++)
             {

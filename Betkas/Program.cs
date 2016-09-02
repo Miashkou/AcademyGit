@@ -7,9 +7,6 @@ namespace Comperator
     {
         static void Main(string[] args)
         {
-            // NAUJAS CHANGES GIT
-            // Antras change
-//Vykintas
             var sw = new Stopwatch();
             var overwatch = new Stopwatch();
             overwatch.Start();
@@ -18,25 +15,27 @@ namespace Comperator
             {
                 Console.WriteLine("Table checksums are not equal.");
 
-                Console.WriteLine("Elapsed: " + sw.Elapsed);
-                sw.Restart();
+                //Console.WriteLine("Elapsed: " + sw.Elapsed);
+                //sw.Restart();
 
-                Console.WriteLine(Query.AreMetricsEqual() ? "Metric sums are equal" : "Metric sums are not equal.");
+                //if (!Query.AreMetricsEqual())
+                //    Console.WriteLine("Metric sums are not equal.");
+                //else Console.WriteLine("Metric sums are equal");
 
-                Console.WriteLine("Elapsed: " + sw.Elapsed + "\r\n");
-                sw.Restart();
+                //Console.WriteLine("Elapsed: " + sw.Elapsed + "\r\n");
+                //sw.Restart();
 
-                Console.WriteLine("========== Row class differences ==========\r\n");
-                Query.ShowDifferences();
+                //Console.WriteLine("========== Row class differences ==========\r\n");
+                //Query.RowShowDifferences();
 
-                Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
-                sw.Restart();
+                //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
+                //sw.Restart();
 
-                Console.WriteLine("========== String differences ==========\r\n");
-                Query.Substring(Query.SelectAllFrom1Query, Query.SelectAllFrom2Query);
+                //Console.WriteLine("========== String differences ==========\r\n");
+                //Query.Substring(Query.SelectAllFrom1Query, Query.SelectAllFrom2Query);
 
-                Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
-                sw.Restart();
+                //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
+                //sw.Restart();
 
                 Console.WriteLine("========== Checksum differences ==========\r\n");
                 Query.Substring(Query.SelectChecksumFrom1Query, Query.SelectChecksumFrom2Query);
@@ -44,16 +43,16 @@ namespace Comperator
                 Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
                 sw.Restart();
 
-                Console.WriteLine("==========Binary Checksum differences ==========\r\n");
-                Query.Substring(Query.SelectBinaryChecksumFrom1Query, Query.SelectBinaryChecksumFrom2Query);
+                //Console.WriteLine("========== Binary checksum differences ==========\r\n");
+                //Query.Substring(Query.SelectBinaryChecksumFrom1Query, Query.SelectBinaryChecksumFrom2Query);
 
-                Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
-                sw.Restart();
+                //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
+                //sw.Restart();
 
-                Console.WriteLine("========== Hashbytes differences ==========\r\n");
-                Query.Substring(Query.SelectHashbytes1Query, Query.SelectHashbytes2Query);
+                //Console.WriteLine("========== Hashbytes differences ==========\r\n");
+                //Query.Substring(Query.SelectHashbytes1Query, Query.SelectHashbytes2Query);
 
-                Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
+                //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
             }
             else
             {
