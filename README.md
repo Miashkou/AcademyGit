@@ -1,3 +1,3 @@
 # AcademyGit
-# Some text goeas here
-# More text here
+
+# Added text# More text here
