@@ -212,4 +212,47 @@ namespace Comperator
             return tableStrings1.Count == 0;
         }
     }
+
+    /// foreach metric in metrics:
+    ///     @"SELECT SUM(metric)
+    ///     WHERE DimensionName = ValidDimension AND
+    ///     DimensionName = ValidDimension
+    ///     DimensionName = ValidDimension"
+    /// return List<string> bad metrics;
+    /// 
+    /// if all metrics correct, check only dimensions
+    /// else, check all dimensions and incorrect metrics
+    /// 
+    /// when discrepancy is found, check if it is in metrics
+    /// if in metrics, try
+    /// @"SELECT SUM(metric)
+    ///     WHERE DimensionName = FirstDimension AND
+    ///     DimensionName = SecondDimension
+    ///     DimensionName = ThirdDimension"
+    /// 
+    /// Use parametarized queries
+    /// 
+    
+    // Parameterized queries
+//    string sql = "SELECT empSalary from employee where salary = @salary";
+//using (SqlConnection connection = new SqlConnection(/* connection info */))
+//{
+//    using (SqlCommand command = new SqlCommand(sql, connection))
+//    {
+//        var salaryParam = new SqlParameter("salary", SqlDbType.Money);
+//    salaryParam.Value = txtMoney.Text;
+
+//        command.Parameters.Add(salaryParam);
+
+//        var results = command.ExecuteReader();
+//}
+//}
+
+    // Getting table names
+//            using (SqlConnection conn = new SqlConnection("<ConnectionString>"))
+//        {
+//            string[] restrictions = new string[4] { null, null, "<TableName>", null };
+//    conn.Open();
+//            var columnList = conn.GetSchema("Columns", restrictions).AsEnumerable().Select(s => s.Field<String>("Column_Name")).ToList();
+//}
 }
