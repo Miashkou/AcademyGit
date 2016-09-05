@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Betkas;
@@ -181,7 +180,7 @@ namespace Comperator
             {
                 Connect.Open();
                 Console.WriteLine("Comparing checksums of tables...");
-                var sarasas = Query.GetStringList(TableChecksumQuery, Connect).Count == 0;
+                var sarasas = GetStringList(TableChecksumQuery, Connect).Count == 0;
                 Connect.Close();
                 return sarasas;
             }
@@ -200,7 +199,7 @@ namespace Comperator
             {
                 Connect.Open();
                 Console.WriteLine("Comparing sums of all metrics...");
-                tableStrings1 = Query.GetStringList(MetricsQuery, Connect);
+                tableStrings1 = GetStringList(MetricsQuery, Connect);
                 Connect.Close();
             }
             catch (Exception exc)
@@ -212,6 +211,13 @@ namespace Comperator
             return tableStrings1.Count == 0;
         }
     }
+
+    //TODO:
+
+    // Cleanup code:
+    //  Introduce columnValueSeperatorChar and columnValueSeperatorCharStr = | 
+    //  Comment existing methods, Row class
+    //  Change method names, where necessary
 
     /// foreach metric in metrics:
     ///     @"SELECT SUM(metric)

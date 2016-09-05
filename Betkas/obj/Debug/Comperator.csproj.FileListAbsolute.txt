@@ -41,3 +41,6 @@ C:\Users\WIN8\Desktop\Belenkas\Betkas\obj\Debug\Comperator.csprojResolveAssembly
 C:\Users\Edvard\OneDrive\Academy Git\Betkas\bin\Debug\Betkas.exe.config
 C:\Users\Edvard\OneDrive\Academy Git\Betkas\obj\Debug\Betkas.exe
 C:\Users\Edvard\OneDrive\Academy Git\Betkas\obj\Debug\Betkas.pdb
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\obj\Debug\Betkas.exe
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\obj\Debug\Betkas.pdb
