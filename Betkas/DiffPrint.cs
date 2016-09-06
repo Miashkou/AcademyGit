@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Betkas
+namespace Comperator
 {
     class DiffPrint
     {
         public static string GetSimiliarString(string original, IEnumerable<string> stringList)
         {
             var bestScore = 0;
-            var similiarString = String.Empty;
-            var originalSplit = original.Split('|');
+            var similiarString = string.Empty;
+            var originalSplit = original.Split(Row.columnValueSeperatorChar);
 
             foreach (var otherString in stringList)
             {
                 var score = 0;
-                var otherSplit = otherString.Split('|');
+                var otherSplit = otherString.Split(Row.columnValueSeperatorChar);
                 for (int i = 0; i < originalSplit.Length; i++)
                 {
                     if (originalSplit[i] == otherSplit[i])
@@ -38,8 +38,8 @@ namespace Betkas
 
         public static List<int> FindDifferenceIndexes(string similarString, string original)
         {
-            string[] thisList = original.Split('|');
-            string[] otherList = similarString.Split('|');
+            string[] thisList = original.Split(Row.columnValueSeperatorChar);
+            string[] otherList = similarString.Split(Row.columnValueSeperatorChar);
             List<int> differences = new List<int>();
             for (int i = 0; i < thisList.Length; i++)
             {
@@ -57,8 +57,8 @@ namespace Betkas
 
                 var differences = FindDifferenceIndexes(diff, bestGuess);
 
-                var diffSplit = diff.Split('|');
-                var bestGuessSplit = bestGuess.Split('|');
+                var diffSplit = diff.Split(Row.columnValueSeperatorChar);
+                var bestGuessSplit = bestGuess.Split(Row.columnValueSeperatorChar);
 
                 PrintWithDifferences(diffSplit, differences);
                 PrintWithDifferences(bestGuessSplit, differences);
@@ -80,7 +80,7 @@ namespace Betkas
                 {
                     Console.Write(strings[i]);
                 }
-                Console.Write("|");
+                Console.Write(Row.columnValueSeperatorStr);
             }
             Console.WriteLine();
         }

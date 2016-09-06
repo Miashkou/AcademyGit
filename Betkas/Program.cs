@@ -15,6 +15,9 @@ namespace Comperator
             {
                 Console.WriteLine("Table checksums are not equal.");
 
+                // Shows which metrics are different
+                //Query.WhichMetricsDifferent();
+
                 //Console.WriteLine("Elapsed: " + sw.Elapsed);
                 //sw.Restart();
 
@@ -26,31 +29,31 @@ namespace Comperator
                 //sw.Restart();
 
                 //Console.WriteLine("========== Row class differences ==========\r\n");
-                //Query.RowShowDifferences();
+                //Query.RowDiscrepancyPrint();
 
                 //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
                 //sw.Restart();
 
                 //Console.WriteLine("========== String differences ==========\r\n");
-                //Query.Substring(Query.SelectAllFrom1Query, Query.SelectAllFrom2Query);
+                //Query.StringDiscrepancyPrint(Query.SelectAllFrom1Query, Query.SelectAllFrom2Query);
 
                 //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
                 //sw.Restart();
 
                 Console.WriteLine("========== Checksum differences ==========\r\n");
-                Query.Substring(Query.SelectChecksumFrom1Query, Query.SelectChecksumFrom2Query);
+                Query.StringDiscrepancyPrint(Query.SelectChecksumFrom1Query, Query.SelectChecksumFrom2Query);
 
                 Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
                 sw.Restart();
 
                 //Console.WriteLine("========== Binary checksum differences ==========\r\n");
-                //Query.Substring(Query.SelectBinaryChecksumFrom1Query, Query.SelectBinaryChecksumFrom2Query);
+                //Query.StringDiscrepancyPrint(Query.SelectBinaryChecksumFrom1Query, Query.SelectBinaryChecksumFrom2Query);
 
                 //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
                 //sw.Restart();
 
                 //Console.WriteLine("========== Hashbytes differences ==========\r\n");
-                //Query.Substring(Query.SelectHashbytes1Query, Query.SelectHashbytes2Query);
+                //Query.StringDiscrepancyPrint(Query.SelectHashbytes1Query, Query.SelectHashbytes2Query);
 
                 //Console.WriteLine(" ========== Elapsed: " + sw.Elapsed + "==========\r\n");
             }
