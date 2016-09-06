@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Betkas;
@@ -181,7 +180,7 @@ namespace Comperator
             {
                 Connect.Open();
                 Console.WriteLine("Comparing checksums of tables...");
-                var sarasas = Query.GetStringList(TableChecksumQuery, Connect).Count == 0;
+                var sarasas = GetStringList(TableChecksumQuery, Connect).Count == 0;
                 Connect.Close();
                 return sarasas;
             }
@@ -200,7 +199,7 @@ namespace Comperator
             {
                 Connect.Open();
                 Console.WriteLine("Comparing sums of all metrics...");
-                tableStrings1 = Query.GetStringList(MetricsQuery, Connect);
+                tableStrings1 = GetStringList(MetricsQuery, Connect);
                 Connect.Close();
             }
             catch (Exception exc)
@@ -212,4 +211,54 @@ namespace Comperator
             return tableStrings1.Count == 0;
         }
     }
+
+    //TODO:
+
+    // Cleanup code:
+    //  Introduce columnValueSeperatorChar and columnValueSeperatorCharStr = | 
+    //  Comment existing methods, Row class
+    //  Change method names, where necessary
+
+    /// foreach metric in metrics:
+    ///     @"SELECT SUM(metric)
+    ///     WHERE DimensionName = ValidDimension AND
+    ///     DimensionName = ValidDimension
+    ///     DimensionName = ValidDimension"
+    /// return List<string> bad metrics;
+    /// 
+    /// if all metrics correct, check only dimensions
+    /// else, check all dimensions and incorrect metrics
+    /// 
+    /// when discrepancy is found, check if it is in metrics
+    /// if in metrics, try
+    /// @"SELECT SUM(metric)
+    ///     WHERE DimensionName = FirstDimension AND
+    ///     DimensionName = SecondDimension
+    ///     DimensionName = ThirdDimension"
+    /// 
+    /// Use parametarized queries
+    /// 
+    
+    // Parameterized queries
+//    string sql = "SELECT empSalary from employee where salary = @salary";
+//using (SqlConnection connection = new SqlConnection(/* connection info */))
+//{
+//    using (SqlCommand command = new SqlCommand(sql, connection))
+//    {
+//        var salaryParam = new SqlParameter("salary", SqlDbType.Money);
+//    salaryParam.Value = txtMoney.Text;
+
+//        command.Parameters.Add(salaryParam);
+
+//        var results = command.ExecuteReader();
+//}
+//}
+
+    // Getting table names
+//            using (SqlConnection conn = new SqlConnection("<ConnectionString>"))
+//        {
+//            string[] restrictions = new string[4] { null, null, "<TableName>", null };
+//    conn.Open();
+//            var columnList = conn.GetSchema("Columns", restrictions).AsEnumerable().Select(s => s.Field<String>("Column_Name")).ToList();
+//}
 }

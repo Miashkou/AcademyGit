@@ -38,3 +38,9 @@ C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\MoreLinq.dll
 C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\Dapper.xml
 C:\Users\WIN8\Desktop\Belenkas\Betkas\bin\Debug\MoreLinq.xml
 C:\Users\WIN8\Desktop\Belenkas\Betkas\obj\Debug\Comperator.csprojResolveAssemblyReference.cache
+C:\Users\Edvard\OneDrive\Academy Git\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\Edvard\OneDrive\Academy Git\Betkas\obj\Debug\Betkas.exe
+C:\Users\Edvard\OneDrive\Academy Git\Betkas\obj\Debug\Betkas.pdb
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\bin\Debug\Betkas.exe.config
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\obj\Debug\Betkas.exe
+C:\Users\Edvard\Dropbox\Adform\DataComperatorAdform Git\Betkas\obj\Debug\Betkas.pdb
