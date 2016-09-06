@@ -39,6 +39,17 @@ namespace Comperator
             return "Data Source=fedw.dwhinfra.d1.adform.zone,35352;Initial Catalog=DiscrepancyTest;Persist Security Info=True;User ID=discrepancy;Password=discrepancy; ";
         }
 
+        public static List<string> ListOfAtributesName = new List<string>();
+
+        public static void SetListOfTableAtributeNames(SqlDataReader reader)
+        {
+            ListOfAtributesName = Enumerable.Range(0, reader.FieldCount).Select(reader.GetName).ToList();
+            //if (ListOfAtributesName.Count == 0)
+            //    ListOfAtributesName = GetColumnNames();
+            //return ListOfAtributesName;
+            //ListOfAtributesName = Enumerable.Range(0, reader.FieldCount).Select(reader.GetName).ToList();
+        }
+
         // Known column data
         private static List<string> Dimensions = new List<string>
         {
@@ -76,12 +87,10 @@ namespace Comperator
         {
             get
             {
+                if (_connect.State.ToString() != "Open")
+                    _connect.Open();
+                    
                 return _connect;
-            }
-
-            set
-            {
-                _connect = value;
             }
         }
 
@@ -90,13 +99,18 @@ namespace Comperator
         {
             get
             {
+                if (_connect2.State.ToString() != "Open")
+                    _connect2.Open();
                 return _connect2;
             }
+        }
 
-            set
-            {
-                _connect2 = value;
-            }
+        public static void CloseConnections()
+        {
+            if (Connect.State.ToString() == "Open")
+                Connect.Close();
+            if (Connect2.State.ToString() == "Open")
+                Connect2.Close();
         }
 
         /// <summary>
@@ -104,15 +118,14 @@ namespace Comperator
         /// </summary>
         public static void RowDiscrepancyPrint()
         {
+            ListOfAtributesName = GetColumnNames();
             IEnumerable<Row> rows1 = new List<Row>();
             IEnumerable<Row> rows2 = new List<Row>();
             Parallel.Invoke(() =>
             {
                 try
                 {
-                    Connect.Open();
                     rows1 = Connect.Query<Row>("SELECT * FROM web_transactionDays1");
-                    Connect.Close();
                 }
                 catch (Exception exc)
                 {
@@ -123,13 +136,11 @@ namespace Comperator
              {
                  try
                  {
-                     Connect2.Open();
                      rows2 = Connect2.Query<Row>("SELECT * FROM web_transactionDays2");
-                     Connect2.Close();
                  }
                  catch (Exception exc)
                  {
-                     Connect.Close();
+                     Connect2.Close();
                      Console.WriteLine("Exception during parallel query: " + exc);
                  }
              });
@@ -147,29 +158,31 @@ namespace Comperator
         /// <param name="connection">Connection to use for query</param>
         /// <param name="closeConnection">Whether to close connection after query. Default: true</param>
         /// <returns>Output of query as a list of strings</returns>
-        public static List<string> GetStringsByQuery(string queryString, SqlConnection connection, bool closeConnection = true)
+        public static List<string> GetStringsByQuery(string queryString, SqlConnection connection, bool closeConnection = false)
         {
-            if (connection.State.ToString() != "Open")
-                connection.Open();
             List<string> allRows = new List<string>();
             try
             {
                 using (SqlCommand command = new SqlCommand(queryString, connection))
                 {
                     command.CommandTimeout = 600;
-                    SqlDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        List<string> row = new List<string>();
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        while (reader.Read())
                         {
-                            var value = reader.GetValue(i);
-                            row.Add(value.ToString());
+                            List<string> row = new List<string>();
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                var value = reader.GetValue(i);
+                                row.Add(value.ToString());
+                            }
+                            allRows.Add(string.Join(Row.columnValueSeperatorStr, row));
                         }
-                        allRows.Add(string.Join(Row.columnValueSeperatorStr, row));
-                    }
-                    reader.Close();
+                        SetListOfTableAtributeNames(reader);
+                        reader.Close();
+                    }  
                 }
+
                 if(closeConnection)
                     connection.Close();
             }
@@ -303,7 +316,7 @@ namespace Comperator
         }
 
         /// <summary>
-        /// Uses default connection string and first table to get column data.
+        /// Uses default connection string and first table to get column data. Hardcoded.
         /// </summary>
         /// <returns></returns>
         public static List<string> GetColumnNames()
@@ -331,7 +344,5 @@ namespace Comperator
     //        var results = command.ExecuteReader();
     //}
     //}
-
-    // Getting table names
 
 }

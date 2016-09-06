@@ -11,13 +11,13 @@ namespace Comperator
         public static string GetSimiliarString(string original, IEnumerable<string> stringList)
         {
             var bestScore = 0;
-            var similiarString = string.Empty;
-            var originalSplit = original.Split(Row.columnValueSeperatorChar);
+            var similiarString = String.Empty;
+            var originalSplit = original.Split('|');
 
             foreach (var otherString in stringList)
             {
                 var score = 0;
-                var otherSplit = otherString.Split(Row.columnValueSeperatorChar);
+                var otherSplit = otherString.Split('|');
                 for (int i = 0; i < originalSplit.Length; i++)
                 {
                     if (originalSplit[i] == otherSplit[i])
@@ -38,8 +38,8 @@ namespace Comperator
 
         public static List<int> FindDifferenceIndexes(string similarString, string original)
         {
-            string[] thisList = original.Split(Row.columnValueSeperatorChar);
-            string[] otherList = similarString.Split(Row.columnValueSeperatorChar);
+            string[] thisList = original.Split('|');
+            string[] otherList = similarString.Split('|');
             List<int> differences = new List<int>();
             for (int i = 0; i < thisList.Length; i++)
             {
@@ -57,8 +57,8 @@ namespace Comperator
 
                 var differences = FindDifferenceIndexes(diff, bestGuess);
 
-                var diffSplit = diff.Split(Row.columnValueSeperatorChar);
-                var bestGuessSplit = bestGuess.Split(Row.columnValueSeperatorChar);
+                var diffSplit = diff.Split('|');
+                var bestGuessSplit = bestGuess.Split('|');
 
                 PrintWithDifferences(diffSplit, differences);
                 PrintWithDifferences(bestGuessSplit, differences);
@@ -68,19 +68,28 @@ namespace Comperator
 
         public static void PrintWithDifferences(string[] strings, List<int> diffIndexes, ConsoleColor color = ConsoleColor.DarkCyan)
         {
+            string[] tableAtributes = Query.ListOfAtributesName.ToArray();
+
             for (int i = 0; i < strings.Length; i++)
             {
+
                 if (diffIndexes.Contains(i))
                 {
                     Console.BackgroundColor = color;
-                    Console.Write(strings[i]);
+                    Console.Write(tableAtributes[i] + " - " + strings[i]);
                     Console.ResetColor();
+                    Console.Write("|");
                 }
                 else
                 {
-                    Console.Write(strings[i]);
+
+                    if (i < 4)
+                    {
+                        Console.Write(tableAtributes[i] + " - " + strings[i]);
+                        Console.Write("|");
+                    }
+
                 }
-                Console.Write(Row.columnValueSeperatorStr);
             }
             Console.WriteLine();
         }

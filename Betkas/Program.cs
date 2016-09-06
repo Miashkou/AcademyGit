@@ -61,7 +61,7 @@ namespace Comperator
             {
                 Console.WriteLine("Table checksums equal.");
             }
-
+            Query.CloseConnections();
             overwatch.Stop();
             Console.WriteLine("\r\n === Overall elapsed: " + overwatch.Elapsed + " ===");
             Console.ReadLine();
