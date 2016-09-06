@@ -147,9 +147,8 @@ namespace Comperator
         /// <param name="connection">Connection to use for query</param>
         /// <param name="closeConnection">Whether to close connection after query. Default: true</param>
         /// <returns>Output of query as a list of strings</returns>
-        public static List<string> GetStringsFromQuery(string queryString, SqlConnection connection, bool closeConnection = true)
+        public static List<string> GetStringsByQuery(string queryString, SqlConnection connection, bool closeConnection = true)
         {
-            connection.Close();
             if (connection.State.ToString() != "Open")
                 connection.Open();
             List<string> allRows = new List<string>();
@@ -197,7 +196,7 @@ namespace Comperator
             {
                 try
                 {
-                    tableStrings1 = GetStringsFromQuery(query1, Connect);
+                    tableStrings1 = GetStringsByQuery(query1, Connect);
                 }
                 catch (Exception exc)
                 {
@@ -209,7 +208,7 @@ namespace Comperator
 
                 try
                 {
-                    tableStrings2 = GetStringsFromQuery(query2, Connect2);
+                    tableStrings2 = GetStringsByQuery(query2, Connect2);
                 }
                 catch (Exception exc)
                 {
@@ -233,7 +232,7 @@ namespace Comperator
             try
             {
                 Console.WriteLine("Comparing checksums of tables...");
-                var sarasas = GetStringsFromQuery(TableChecksumQuery, Connect).Count == 0;
+                var sarasas = GetStringsByQuery(TableChecksumQuery, Connect).Count == 0;
                 return sarasas;
             }
             catch (Exception e)
@@ -253,7 +252,7 @@ namespace Comperator
             try
             {
                 Console.WriteLine("Comparing sums of all metrics...");
-                tableStrings1 = GetStringsFromQuery(MetricsQuery, Connect);
+                tableStrings1 = GetStringsByQuery(MetricsQuery, Connect);
             }
             catch (Exception exc)
             {
@@ -273,7 +272,7 @@ namespace Comperator
             {
                 try
                 {
-                    if (GetStringsFromQuery("SELECT CHECKSUM_AGG(CHECKSUM(" + metric 
+                    if (GetStringsByQuery("SELECT CHECKSUM_AGG(CHECKSUM(" + metric 
                         + ")) FROM web_transactionDays1 EXCEPT SELECT CHECKSUM_AGG(CHECKSUM(" 
                         + metric + ")) FROM web_transactionDays2", Connect).Count != 0)
                     {
